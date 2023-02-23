@@ -10,6 +10,7 @@ import UIKit
 // MARK: - Step2 -
 // This view controller is kind of orphaned right now, it doesn't actually know that it needs to be shown and we don't even have a window yet.
 
+/// Controller to house tabs and root tab controllers 
 final class RMTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -17,7 +18,9 @@ final class RMTabBarController: UITabBarController {
         self.view.backgroundColor = .red
         setUpTabs()
     }
-    
+   
+// MARK: - Step4 -
+    // set up main view and subviews
     private func setUpTabs() {
         let charactersVC = RMCharacterViewController()
         let locationsVC = RMLocationViewController()
